@@ -37,7 +37,7 @@ function register(req, res) {
 
   Users.add(user)
     .then(user => {
-      res.status(201).json(user)
+      res.status(201).json({message: "New user created."})
     })
     .catch(err => {
       res.status(500).json({
